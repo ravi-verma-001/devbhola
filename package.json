@@ -1,0 +1,18 @@
+{
+  "name": "dovix-media-portfolio",
+  "version": "1.0.0",
+  "description": "Dev Bhola - Founder of Dovix Media & Meta Ads Expert Portfolio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "meta-ads",
+    "digital-marketing",
+    "portfolio",
+    "dovix-media",
+    "dev-bhola"
+  ],
+  "author": "Dev Bhola",
+  "license": "ISC"
+}
