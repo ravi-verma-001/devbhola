@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Interactive ROAS & Growth Simulator
+  // 3. Interactive ROAS & Growth Simulator (Indian Rupees ₹)
   const spendSlider = document.getElementById('calc-spend');
   const aovSlider = document.getElementById('calc-aov');
   const spendDisplay = document.getElementById('calc-spend-val');
@@ -67,27 +67,27 @@ document.addEventListener('DOMContentLoaded', () => {
   function calculateGrowth() {
     if (!spendSlider || !aovSlider) return;
 
-    const spend = parseFloat(spendSlider.value) || 5000;
-    const aov = parseFloat(aovSlider.value) || 85;
+    const spend = parseFloat(spendSlider.value) || 50000;
+    const aov = parseFloat(aovSlider.value) || 1500;
 
-    spendDisplay.textContent = `$${spend.toLocaleString()}/mo`;
-    aovDisplay.textContent = `$${aov.toLocaleString()}`;
+    spendDisplay.textContent = `₹${spend.toLocaleString('en-IN')}/mo`;
+    aovDisplay.textContent = `₹${aov.toLocaleString('en-IN')}`;
 
     // Dynamic performance scaling model
     let benchmarkRoas = 5.2;
-    if (spend >= 10000) benchmarkRoas = 4.8;
-    if (spend >= 25000) benchmarkRoas = 4.2;
-    if (spend >= 50000) benchmarkRoas = 3.9;
+    if (spend >= 100000) benchmarkRoas = 4.8;
+    if (spend >= 250000) benchmarkRoas = 4.3;
+    if (spend >= 500000) benchmarkRoas = 3.9;
 
     const projectedRevenue = spend * benchmarkRoas;
     const baselineRevenue = spend * 2.0; // Industry standard baseline
     const netProfitLift = projectedRevenue - baselineRevenue;
     const estimatedOrders = Math.round(projectedRevenue / aov);
 
-    if (projectedRevenueEl) projectedRevenueEl.textContent = `$${Math.round(projectedRevenue).toLocaleString()}`;
+    if (projectedRevenueEl) projectedRevenueEl.textContent = `₹${Math.round(projectedRevenue).toLocaleString('en-IN')}`;
     if (projectedRoasEl) projectedRoasEl.textContent = `${benchmarkRoas.toFixed(1)}x`;
-    if (netLiftEl) netLiftEl.textContent = `+$${Math.round(netProfitLift).toLocaleString()}`;
-    if (estimatedOrdersEl) estimatedOrdersEl.textContent = `${estimatedOrders.toLocaleString()} orders`;
+    if (netLiftEl) netLiftEl.textContent = `+₹${Math.round(netProfitLift).toLocaleString('en-IN')}`;
+    if (estimatedOrdersEl) estimatedOrdersEl.textContent = `${estimatedOrders.toLocaleString('en-IN')} orders`;
   }
 
   if (spendSlider && aovSlider) {
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 6. Lead Capture & Free Meta Audit Modal
+  // 6. Lead Capture & Free Consultation Modal
   const modal = document.getElementById('audit-modal');
   const openModalBtns = document.querySelectorAll('.trigger-audit-modal');
   const closeModalBtn = document.getElementById('close-modal-btn');
@@ -227,13 +227,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Pre-fill WhatsApp message directly to Dev Bhola's number
       const encodedMsg = encodeURIComponent(
-        `Hi Dev! I just requested a Meta Ads Audit on your Dovix Media portfolio.\n\n` +
+        `Hi Dev! I just requested a Free Consultation on your portfolio.\n\n` +
         `👤 Name: ${name}\n` +
         `🌐 Website: ${website}\n` +
         `✉️ Email: ${email}\n` +
         `💰 Monthly Spend: ${spend}\n` +
         `🎯 Current Goal / Bottleneck: ${goals || 'Scaling profitably'}\n\n` +
-        `Let's connect!`
+        `Looking forward to connecting!`
       );
 
       if (waSuccessBtn) {
