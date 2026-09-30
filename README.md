@@ -33,6 +33,8 @@ Your local server is live at:
 
 Restart anytime with:
 ```bash
+npm run dev
+# or
 npm start
 # or
 node server.js

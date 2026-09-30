@@ -38,23 +38,20 @@
   <div class="cyber-grid"></div>
 
   <!-- FLOATING PILL NAVBAR (Modern Apple/Linear Light Style) -->
-  <header class="floating-pill-nav px-4 sm:px-6 py-2.5">
-    <div class="flex items-center justify-between">
+  <header class="floating-pill-nav">
+    <div class="flex items-center justify-between gap-2 sm:gap-4">
       
       <!-- Highlighted Brand Logo & Identity (Dev Bhola) -->
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-9 h-9 rounded-full bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 p-[1.5px] shadow-md shadow-blue-500/20 group-hover:scale-105 transition duration-300">
+      <a href="#" class="flex items-center gap-2 sm:gap-2.5 group shrink-0">
+        <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 p-[1.5px] shadow-md shadow-blue-500/20 group-hover:scale-105 transition duration-300 shrink-0">
           <div class="w-full h-full bg-white rounded-full flex items-center justify-center font-bold text-xs text-blue-600 tracking-wider">
             DB
           </div>
         </div>
         
-        <!-- Highlighted Dev Bhola Badge -->
-        <div class="header-dev-highlight">
-          <span class="header-name-gradient text-sm sm:text-base font-extrabold tracking-tight">Dev Bhola</span>
-          <span class="hidden sm:inline-flex text-[10px] uppercase font-bold text-blue-700 bg-blue-100/90 px-2 py-0.5 rounded-full border border-blue-200">
-            Meta Ads Expert
-          </span>
+        <!-- Highlighted Dev Bhola Single-Line Name -->
+        <div class="header-dev-highlight whitespace-nowrap shrink-0">
+          <span class="header-name-gradient whitespace-nowrap">Dev Bhola</span>
         </div>
       </a>
 
@@ -68,24 +65,24 @@
       </nav>
 
       <!-- Action Buttons -->
-      <div class="flex items-center gap-3">
-        <!-- Direct WhatsApp Link in Navbar -->
+      <div class="flex items-center gap-1.5 sm:gap-3 shrink-0">
+        <!-- Direct WhatsApp Link in Navbar (desktop/tablet) -->
         <a href="https://wa.me/916267777534?text=Hi%20Dev!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20scaling%20our%20Meta%20Ads." 
            target="_blank" 
            rel="noopener noreferrer" 
-           class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-semibold hover:bg-emerald-100 transition shadow-sm"
+           class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-semibold hover:bg-emerald-100 transition shadow-sm shrink-0"
            title="Chat with Dev Bhola on WhatsApp">
           <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
           <span>WhatsApp</span>
         </a>
 
-        <!-- Free Consultation Button -->
-        <button class="trigger-audit-modal btn-modern-primary text-xs sm:text-sm py-2 px-5">
-          <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+        <!-- Free Consultation Button (Compact on Mobile) -->
+        <button class="trigger-audit-modal btn-modern-primary navbar-cta-btn">
+          <i data-lucide="calendar" class="w-3 h-3 sm:w-3.5 sm:h-3.5"></i>
           <span>Free Consultation</span>
         </button>
 
-        <button id="mobile-menu-btn" class="md:hidden p-1.5 text-slate-600 hover:text-slate-900">
+        <button id="mobile-menu-btn" class="md:hidden p-1 sm:p-1.5 text-slate-600 hover:text-slate-900 rounded-lg hover:bg-slate-100 transition shrink-0" aria-label="Toggle Menu">
           <i data-lucide="menu" class="w-5 h-5"></i>
         </button>
       </div>
